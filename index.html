@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Humanity AI</title>
+  <style>
+    :root {
+      --bg: #ecebe9;
+      --surface: #f7f6f4;
+      --ink: #1e1e1c;
+      --muted: #6a6964;
+      --accent: #29593b;
+      --line: #d9d7d2;
+      --shadow: 0 16px 30px rgba(20, 20, 20, 0.08);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+
+    h1, h2, h3, .brand, .signature-name {
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+
+    .container {
+      width: min(1060px, 92vw);
+      margin: 0 auto;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 34px;
+      margin: 22px 0;
+    }
+
+    nav {
+      padding: 22px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: clamp(2rem, 2.8vw, 2.5rem);
+      font-weight: 700;
+    }
+
+    .brand small {
+      font: 500 0.68rem/1.2 "Inter", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-left: 0.4rem;
+    }
+
+    .nav-meta {
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 5vw, 4rem);
+      margin-bottom: 16px;
+      max-width: 16ch;
+    }
+
+    .hero p {
+      font-size: clamp(1.15rem, 2.1vw, 1.45rem);
+      max-width: 40ch;
+      margin: 0 0 24px;
+      color: #2f2f2d;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      border: 1px solid var(--ink);
+      padding: 12px 18px;
+      border-radius: 999px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all .15s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+    .btn.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    section h2 {
+      font-size: clamp(1.45rem, 3.2vw, 2.1rem);
+      margin-bottom: 14px;
+    }
+
+    section p {
+      margin: 0 0 12px;
+      color: #2f2f2d;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .card h3 { font-size: 1.35rem; margin-bottom: 10px; }
+    .price { color: var(--accent); font-weight: 700; }
+
+    .industries {
+      font-size: 1.03rem;
+      color: #2a2a29;
+    }
+
+    .badge {
+      border: 2px dashed #a8aaa3;
+      border-radius: 12px;
+      padding: 24px;
+      width: fit-content;
+      margin-bottom: 16px;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .badge strong {
+      display: block;
+      font-size: 1.15rem;
+      color: var(--accent);
+    }
+
+    .mark {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .photo {
+      width: 120px;
+      aspect-ratio: 1;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #b2b6b0, #dddeda);
+      display: grid;
+      place-items: center;
+      color: #3e3f3b;
+      font-weight: 700;
+      border: 1px solid #c7c9c2;
+    }
+
+    .signature-name {
+      margin-top: 14px;
+      font-size: 1.3rem;
+    }
+
+    .cta {
+      text-align: left;
+    }
+
+    .cta .btn {
+      margin: 6px 0 12px;
+    }
+
+    footer {
+      margin: 28px 0 38px;
+      color: #3d3d3a;
+      text-align: center;
+      font-size: 0.98rem;
+    }
+
+    @media (max-width: 700px) {
+      .panel { padding: 24px; }
+      .mark { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="container">
+    <div class="nav-inner panel">
+      <div class="brand">Humanity <small>AI</small></div>
+      <div class="nav-meta">806-773-2106 · <a href="#cta" style="color:var(--accent);font-weight:700;text-decoration:none;">Book a Call</a></div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="panel hero">
+      <h1>We teach your employees how to use AI.</h1>
+      <p>So your business runs faster, smarter, and stops leaving money on the table.</p>
+      <div class="button-row">
+        <a class="btn primary" href="#cta">Book a Free 30 Minute Call</a>
+        <a class="btn" href="#how-it-works">See How It Works</a>
+      </div>
+    </section>
+
+    <section class="panel" id="how-it-works">
+      <h2>Most businesses know AI matters.</h2>
+      <p>Nobody has shown their team what to actually do with it.</p>
+      <p>Your competitors are figuring it out. Your employees are curious but confused. And every vendor you've talked to wants to sell you software nobody ends up using.</p>
+      <p><strong>We do something different.</strong><br />We teach your people.</p>
+    </section>
+
+    <section class="panel">
+      <h2>We come to your office.</h2>
+      <p>We spend a half day or full day with your team. We show them exactly how to use AI for their specific job. Real tools. Real workflows. Real results built during the session.</p>
+      <p>They leave knowing what to do Monday morning.</p>
+      <p>No software to buy. No platform to manage. No vendor to depend on.</p>
+      <p>Just your people. Smarter. Faster. More capable than they were the day before.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Three ways to work with us</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Train</h3>
+          <p>We come to you. Half day or full day. Your entire team learns how to use AI to do their jobs better. Starting immediately.</p>
+          <p class="price">From $2,500.</p>
+        </article>
+        <article class="card">
+          <h3>Certify</h3>
+          <p>Your employees earn a Humanity AI Certification. Documented. Credentialed. Proof your organization takes AI seriously.</p>
+          <p class="price">From $4,500.</p>
+        </article>
+        <article class="card">
+          <h3>Implement</h3>
+          <p>When your team is ready for more — we build the AI systems that run your business. All training included at no charge for implementation clients.</p>
+          <p class="price">From $3,950/month.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Who we work with</h2>
+      <p class="industries">Law firms. Accounting firms. Engineering companies. Oil and gas consultants. Insurance agencies. Credit unions. Community banks. Electric co-ops. Technology companies. Construction firms. Family owned manufacturers.</p>
+      <p>Any business with people worth investing in.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Why Humanity AI</h2>
+      <p>We're not a software company.</p>
+      <p>We're not an online course you forget about.</p>
+      <p>We're an AI education company that shows up in person, teaches your people what actually works, and certifies them so your organization owns that knowledge forever.</p>
+      <p>We're based in Lubbock, Texas. We work with businesses across West Texas and organizations nationally.</p>
+      <p>And we give a damn about what happens to your business in this new world of AI.</p>
+    </section>
+
+    <section class="panel">
+      <h2>The Certification</h2>
+      <div class="badge">
+        <div>Simple badge graphic</div>
+        <strong>Humanity AI Certified</strong>
+      </div>
+      <p>When your employees complete our training they earn a Humanity AI Certification. A documented credential that signals your organization is serious about AI — to your team, your clients, and your competitors.</p>
+      <p>Three certifications available:</p>
+      <ul>
+        <li><strong>AI Operator</strong> — for every employee. How to use AI to do your job better.</li>
+        <li><strong>AI Governance Specialist</strong> — for IT teams and leadership. How to keep your organization safe and compliant.</li>
+        <li><strong>AI Implementation Builder</strong> — for ops managers and technical staff. How to build AI systems that run your business.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <div class="mark">
+        <div class="photo">Mark Photo</div>
+        <div>
+          <h2>From Mark</h2>
+          <p>Hi. I'm Mark Murray.</p>
+          <p>I've started over 20 companies in West Texas. I've watched AI change every industry I've worked in.</p>
+          <p>And I've seen what happens when organizations ignore it and what happens when they embrace it.</p>
+          <p>The ones that win aren't the ones who bought the most software.</p>
+          <p>They're the ones who invested in their people first.</p>
+          <p>That's what we do.</p>
+          <p class="signature-name">— Mark Murray</p>
+          <p>Founder, Humanity AI<br />806-773-2106</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel cta" id="cta">
+      <h2>Ready to teach your team how to use AI?</h2>
+      <p>One call. 30 minutes. We'll tell you exactly which training makes sense for your organization and what your team needs most right now.</p>
+      <p>No pitch. No pressure. Just a straight conversation.</p>
+      <a class="btn primary" href="tel:18067732106">Book Your Free 30 Minute Call →</a>
+      <p>Or text Mark directly — <strong>806-773-2106</strong>. He picks up.</p>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="panel">
+      Humanity AI · Lubbock, Texas · gethumanity.ai · 806-773-2106<br />
+      We teach your employees how to use AI.<br />
+      Everything else follows from that.
+    </div>
+  </footer>
+</body>
+</html>
